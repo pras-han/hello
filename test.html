@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Syncopate:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="google-fonts-1-css"
+        href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Condensed%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.6.3"
+        type="text/css" media="all">
+    <title>navbar</title>
+    <style>body{
+        /* background-image: url(https://cdn.hipwallpaper.com/i/89/80/w8qd1O.jpg); */
+        background-position: 70% 48%;
+        background-size: 640px;
+        background-repeat: no-repeat;
+        background-color: black;
+        background-image: url("https://gentium.pixerex.com/wp-content/uploads/2019/01/hero_02.jpg");
+        height: 1000px;
+    }
+    header{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    div{
+        /* margin-right: 300px; */
+        margin-left: 10px;
+        font-family: cursive;
+        font-weight: 40000;
+    } 
+    .c1{
+        position: sticky;
+    }
+    header{
+        position: sticky;
+    }
+    span{
+        padding: 40px 2px 25px 2px;
+        float: left;
+        transition: all .4s ease-in
+    }
+    
+    .navbar{
+        background-color: #e9204f;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+    
+        color: white;
+        font-weight: bold;
+        font-family: sans-serif;
+        border-radius: 5px;
+        position: sticky;
+    }
+    .navbar ul{
+        overflow: auto;
+        padding-left: 272px;
+        position: sticky;
+    }
+    .navbar li{
+        float: left;
+        list-style: none;
+        padding: 40px 20px 25px 20px;
+        margin: 4px ;
+        /* transition-property: padding;
+        transition-delay: 1s;
+        transition-duration: 0.5s; */
+        transition: all .6s ease-in-out;
+    }
+    .navbar li:hover{
+        background-color: #bd0f38a2;
+        opacity: 0.7px;
+        margin-top: 5px;
+        padding-top: 20px;
+        color: whitesmoke;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .srh{
+        padding: 40px 50px 25px 20px;
+    }
+    input:hover{
+        border: 2px solid rgb(131, 182, 202);
+        /* cursor: pointer; */
+    }
+    input{
+        margin-left: 175px;
+        height: 20px;
+        width: 175px;
+        border: 2px solid rgb(15, 15, 15);
+        border-radius: 15px;
+    }
+    h1{
+        color: rgb(255, 255, 255);
+        font-size: 80px;
+        display: inline-block;
+        width: 700px;
+        font-family: "AvantGarde Bold", Sans-serif;
+        /* font-family: 'Coda Caption', sans-serif; */
+        letter-spacing: 0px;
+        box-sizing: border-box;
+        padding-bottom: 10px;
+        line-height: 100%;
+        /* font-family: 'Syncopate', sans-serif; */
+    }
+    button{
+        position: relative;
+        padding: 0px;
+        margin: 30px;
+        margin-left: 50px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: 5000px;
+        padding: 12px 30px 12px 30px;
+        font-family: "AvantGarde Bold", sans-serif;
+        background-color: black;
+        /* border: 2px solid #e41747 */
+        border: 3px solid #e9204f;
+        color: white;
+        font-weight: 500px;
+    }
+    #btn::before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: -1;
+        transition: transform 1s ease-in-out;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    #btn:hover::before{
+        background-color: #e9204f;
+        transform: scaleX(1);
+    }
+    #btn:focus::before {
+        background-color: #e9204f;
+        transform: scaleX(1);
+        
+    }
+    #btn{
+        z-index: 1;
+    }
+    /* #btn::after{
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: -1;
+        transition: transform .7s ease-in-out;
+        transform: scaleX(0);
+        transform-origin: left;
+    } */
+    /* #btn:focus::after{
+        background-color: #000000;
+        transform: scaleX(1);
+    }
+    #btn:hover:after{
+        background-color: #000000;
+        transform: scaleX(1);
+        
+    } */
+    h3{
+        /* border: 3px solid black; */
+        display: inline-block;
+        align-content: center;
+    }
+    p{
+        display: inline-block;
+    }
+    .hello{
+        color: whitesmoke;
+        text-align: center;
+        width: 100%;
+        background-color: black;
+        border: 2px solid rgb(173, 169, 169) ;
+        /* border-radius: 40px; */
+        box-sizing: border-box;
+        padding: 1px 37px;
+        text-align: center;
+        margin-top: 110px;
+        margin-right: 15px;
+        margin-left: 15px;
+        box-shadow: 3px 3px 5px 6px rgb(161, 157, 157);
+    }
+    .hello div{
+        border: 2px solid #e9204f;
+    }
+    #k_ho{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+    }
+    #d1{
+        position: relative;
+        text-align: center;
+        margin: 10px, 17px, 10px, 10px;
+        width: 23%;
+        border: 2px solid #e9204f;
+        /* border-rasdius: 40px; */
+        box-sizing: border-box;
+        padding: 1px 15px;
+        text-align: center;
+        margin-top: 110px;
+        box-shadow: 2px 2px 10px 6px #e9204f;
+        opacity: 1;
+    }
+    #d2{
+        position: relative;
+        opacity: 0.8;
+        text-align: center;
+        width: 30%;
+        margin: 10px; 
+        border: 2px solid #e9204f;
+        /* border-radius: 40px; */
+        box-sizing: border-box;
+        padding: 1px 37px;
+        text-align: center;
+        margin-top: 50px;
+        box-shadow: 2px 2px 10px 6px #e9204f;
+    }
+    #d3{
+        position: relative;
+        text-align: center;
+        width: 30%;
+        border: 2px solid #e9204f;
+        /* border-radius: 40px; */
+        box-sizing: border-box;
+        padding: 1px 37px;
+        text-align: center;
+        margin-top: 110px;
+        box-shadow: 2px 2px 10px 6px #e9204f;
+        opacity: 0.8;
+    }
+    .hello{
+        transition: all 0.4s ease-in-out;
+        transform: rotateX(309);
+        
+    }
+    .hello:hover{
+        /* background-color: floralwhite; */
+        transform: rotateX(360);
+        
+    }
+    #text{
+        width: 700px;
+    }</style>
+</head>
+
+
+<body>
+    <header style="position: sticky;">
+        <nav class="navbar">
+            <div class="c1">
+                <span>W</span><span>E</span><span>B</span><span>S</span><span>H</span><span>I</span><span>T</span><span>E</span>
+            </div>
+            <ul>
+                <li>HOME</li>
+                <li data-sub-menu="hellow">SERVICES</li>
+                <LI>CONTACT US</LI>
+                <li>ABOUT US</li>
+                <div class="srh">
+                    <input type="text" name="search" id="" placeholder="Search the website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div id="don">
+        <div id="text">
+            <h1>We're a digital agency.</h1>
+            <div>
+                <button id="btn">Getting started</button>
+            </div>
+        </div>
+        <div id="k_ho">
+
+            <div class="hello" id="d1">
+                <h3>HOME</h3>
+                <p>You just need to hire me and ask me to make on for you. I will deliver it within one week using HTML
+                    and
+                    CSS Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quam eos expedita </p>
+            </div>
+            <div id="d2" class="hello">
+                <h3>About Us</h3>
+                <p>You just need to hire me and ask me to make on for you. I will deliver it within one week using HTML
+                    and
+                    CSS Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quam eos expedita . </p>
+            </div>
+            <div id="d3" class="hello">
+                <h3>Our services</h3>
+                <p>You just need to hire me and ask me to make on for you. I will deliver it within one week using HTML
+                    and
+                    CSS Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quam eos expedita . </p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

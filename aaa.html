@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animation.css">
+
+    <title>animation of box</title>
+    <style>
+    :root{
+        --ballcolor: rgb(77, 221, 125);
+        --boxcolor: rgba(152, 251, 152, 0.589);
+        --rotatespeed: 30s;
+        --bouncespeed: 2s;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: black;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 75px;
+        perspective: 10em;
+        transform-style: preserve-3d;
+        perspective-origin: 50% calc(50% - 2em);
+    
+    }
+    #view{
+        position: relative;
+        transform-style: preserve-3d;
+        animation:
+        rotate var(--rotatespeed) infinite linear;}
+        
+        @keyframes rotate {
+            to { transform: rotateY(360deg);}
+    }
+    #ball{
+        /* background-color: var(--ballcolor); */
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 1em;
+        left: -0.5em;
+        background-image: radial-gradient(circle at top, var(--ballcolor), #000);
+        animation: rotate var(--rotatespeed) infinite linear reverse;
+    }
+    @keyframes ballbounce {
+        0%, 100% {bottom: 1em}
+        50%{ bottom: 3em;   animation-timing-function: ease-in}
+    }
+    .boxshadow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(124, 111, 111);
+        background-image: radial-gradient(black 30%, rgb(83, 78, 78) 50%);
+    }
+    #box{
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        top: -1em;
+        left: -1em;
+    } 
+    .left, .right, .front, .back{
+        background-color: var(--boxcolor);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 0.5em #000a00 inset;
+    }
+    .front{
+        transform: translateZ(1em);
+    }
+    .right{ transform: rotateY(90deg) translateZ(1em);}
+    .back{ transform: rotateY(180deg) translateZ(1em);}
+    .left{ transform: rotateY(270deg) translateZ(1em);}
+    .top{
+        background-color: var(--boxcolor);
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        transform: translateY(-50%) rotateX(90deg);
+    }
+    .bottom{
+        background-color: var(--boxcolor);
+        position: absolute;
+        width: 2em;
+        height: 2em;
+        transform: translateY(-50%) rotateX(90deg);
+        box-shadow: 0 0 0.5em #000;
+    }
+    
+    #floor{
+        width: 15em;
+        height: 15em;
+        top: 1em; 
+        background-image: radial-gradient( #0000,#000 75%), 
+        repeating-conic-gradient(from 45deg, gray 0deg 90deg, rgba(27, 24, 24, 0.685) 90deg 180deg);
+        background-size: 100%, 1em 1em;
+        position: absolute;
+        transform: translate(-50%, -50%)
+        rotateX(90deg);
+    }
+</style>
+
+</head>
+
+<body>
+    <div id="view">
+        <div id="ball"></div>
+        <div id="box">
+            <div class="top">
+                <div class="boxshadow"></div>
+            </div>
+            <div class="right"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+        <div id="floor"></div>
+    </div>
+
+
+</body>
+
+</html>
